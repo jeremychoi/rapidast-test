@@ -5,7 +5,7 @@
         "version": "v1.23.5+3afdacb"
     },
     "paths": {
-        "/": {
+        "/apis/user.openshift.io/v1/groups": {
             "get": {
                 "description": "list or watch objects of kind Group",
                 "consumes": [
@@ -19,7 +19,7 @@
                     "application/vnd.kubernetes.protobuf;stream=watch"
                 ],
                 "schemes": [
-                    "http"
+                    "https"
                 ],
                 "operationId": "listGroup",
                 "parameters": [
@@ -89,10 +89,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "#/definitions/com.github.openshift.api.user.v1.GroupList"
-                        }
+                        "description": "OK"
                     },
                     "401": {
                         "description": "Unauthorized"
